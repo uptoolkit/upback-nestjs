@@ -13,10 +13,10 @@ async function bootstrap() {
   app.setViewEngine('hbs');
 
   const config = new DocumentBuilder()
-    .setTitle('Call Up')
-    .setDescription('Call Up Rest Api Documentation')
+    .setTitle('Up NestJS example')
+    .setDescription('Up Rest Api Documentation')
     .setVersion('1.0')
-    .addTag('callup')
+    .addTag('Uptoolkit')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
