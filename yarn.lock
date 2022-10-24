@@ -1007,10 +1007,10 @@
   resolved "https://registry.yarnpkg.com/@nestjs/mapped-types/-/mapped-types-1.1.0.tgz#54a9fa61079635dd6c3c75fd9593f20b2302a55b"
   integrity sha512-+2kSly4P1QI+9eGt+/uGyPdEG1hVz7nbpqPHWZVYgoqz8eOHljpXPag+UCVRw9zo2XCu4sgNUIGe8Uk0+OvUQg==
 
-"@nestjs/microservices@^9.1.2":
-  version "9.1.2"
-  resolved "https://registry.yarnpkg.com/@nestjs/microservices/-/microservices-9.1.2.tgz#c449e60529d1b7d40544433450fbb684805fb3f0"
-  integrity sha512-i/Vgw7CXHFBe1qNZdhJ2smf0MmluFK1P8TGV4HdT8yMdwqT6hc8Elm7Fb1ZIdm0R3Sn30CnsCpvFNm7cXTQ07A==
+"@nestjs/microservices@9.1.6":
+  version "9.1.6"
+  resolved "https://registry.yarnpkg.com/@nestjs/microservices/-/microservices-9.1.6.tgz#0eab2e42dd6d1e7562556d43ca688bdf2fa084a8"
+  integrity sha512-ppcA+ihIEJRvjpGc/ognlWwpp3Kra6wyH66BvqWJiNQa8T44V4Jrgn4mhQkd91TuVlGVS2vhG2KGeColLb70Sw==
   dependencies:
     iterare "1.2.1"
     tslib "2.4.0"
@@ -1053,10 +1053,10 @@
     path-to-regexp "3.2.0"
     swagger-ui-dist "4.14.0"
 
-"@nestjs/terminus@^9.1.1":
-  version "9.1.1"
-  resolved "https://registry.yarnpkg.com/@nestjs/terminus/-/terminus-9.1.1.tgz#fd346d7d574d3635c1472768aa16c90c66b7dc36"
-  integrity sha512-8XrXOTseUO8eQZYm/JZbRnznpyS1sVvMkHLW8BOi02s7Bzxw3UPiFOOF34ueKp4ONUjUCoKq36BmwY00dpjofA==
+"@nestjs/terminus@9.1.2":
+  version "9.1.2"
+  resolved "https://registry.yarnpkg.com/@nestjs/terminus/-/terminus-9.1.2.tgz#2732971e9d1d9e4c42e6823aca2a311dbce3bf9f"
+  integrity sha512-6itH7tVucUyN/NTImnIiVmdiIVbvUCUXVzDjlNiHzl9DLx3dRyN4fyfFFS1ICcg7O0OhXNOCuDd/onV8ceH1Hg==
   dependencies:
     boxen "5.1.2"
     check-disk-space "3.3.1"
