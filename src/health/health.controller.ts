@@ -12,11 +12,12 @@ export class HealthController {
     private http: HttpHealthIndicator,
   ) {}
 
+  // To adapt to your needs
   @Get()
   @HealthCheck()
   check() {
     return this.health.check([
-      () => this.http.pingCheck('callup', 'https://www.callup.be'),
+      () => this.http.pingCheck('up', 'https://uptoolkit.com'),
     ]);
   }
 }
