@@ -37,7 +37,14 @@ yarn dev
 
 ### 2. Create and seed the database
 
-Run the following command to create your SQLite database file. This also creates the `User` and `Post` tables that are defined in [`prisma/schema.prisma`](./prisma/schema.prisma):
+By default it use a Postgres SQL from the docker-compose. You should adapt the .env (you can start from the .env.example) and the schema.prisma to adapt it to your preferred database connection. Please be sure to have docker and docker-compose ([https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)) on your computer before launching this command. You can have a quick check to docker-compose.yml to adapt it to your needs. There is pgadmin and appsmith (nocode app) included but absolutely not mandatory (you can remove it from the docker-compose.yml).
+
+
+```
+docker-compose up -d
+```
+
+Run the following command to create your Postgres SQL database file. This also creates the `User` and `Post` tables that are defined in [`prisma/schema.prisma`](./prisma/schema.prisma):
 
 ```
 npx prisma migrate dev --name init
