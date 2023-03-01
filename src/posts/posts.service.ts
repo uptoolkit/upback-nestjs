@@ -22,6 +22,9 @@ export class PostsService {
           equals: id,
         },
       },
+      include: {
+        author: true,
+      },
     });
   }
 
