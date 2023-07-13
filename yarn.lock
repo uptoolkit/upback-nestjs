@@ -1201,10 +1201,10 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
-"@sideway/formula@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@sideway/formula/-/formula-3.0.0.tgz#fe158aee32e6bd5de85044be615bc08478a0a13c"
-  integrity sha512-vHe7wZ4NOXVfkoRb8T5otiENVlT7a3IAiw7H5M2+GO+9CDgcVUUsX1zalAztCmwyOr2RUTGJdgB+ZvSVqmdHmg==
+"@sideway/formula@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@sideway/formula/-/formula-3.0.1.tgz#80fcbcbaf7ce031e0ef2dd29b1bfc7c3f583611f"
+  integrity sha512-/poHZJJVjx3L+zVD6g9KgHfYnb443oi7wLu/XKojDviHy6HOEOA6z1Trk5aR1dGcmPenJEgb2sK2I80LeS3MIg==
 
 "@sideway/pinpoint@^2.0.0":
   version "2.0.0"
@@ -4213,14 +4213,14 @@ jest@28.1.2:
     jest-cli "^28.1.2"
 
 joi@^17.4.2:
-  version "17.6.1"
-  resolved "https://registry.yarnpkg.com/joi/-/joi-17.6.1.tgz#e77422f277091711599634ac39a409e599d7bdaa"
-  integrity sha512-Hl7/iBklIX345OCM1TiFSCZRVaAOLDGlWCp0Df2vWYgBgjkezaR7Kvm3joBciBHQjZj5sxXs859r6eqsRSlG8w==
+  version "17.9.2"
+  resolved "https://registry.yarnpkg.com/joi/-/joi-17.9.2.tgz#8b2e4724188369f55451aebd1d0b1d9482470690"
+  integrity sha512-Itk/r+V4Dx0V3c7RLFdRh12IOjySm2/WGPMubBT92cQvRfYZhPM2W0hZlctjj72iES8jsRCwp7S/cRmWBnJ4nw==
   dependencies:
     "@hapi/hoek" "^9.0.0"
     "@hapi/topo" "^5.0.0"
     "@sideway/address" "^4.1.3"
-    "@sideway/formula" "^3.0.0"
+    "@sideway/formula" "^3.0.1"
     "@sideway/pinpoint" "^2.0.0"
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
@@ -4709,9 +4709,9 @@ nestjs-prisma-crud-schematics@^1.0.0-beta.12:
     typescript "^3.4.5 || ^4.3.5"
 
 nestjs-prisma-crud@^1.0.0-beta.16:
-  version "1.0.0-beta.16"
-  resolved "https://registry.yarnpkg.com/nestjs-prisma-crud/-/nestjs-prisma-crud-1.0.0-beta.16.tgz#5709dcd019afd790b882b4be122aee0745aadd87"
-  integrity sha512-yQ44yhQU0mpOAzIjZF75w87G57W4NIZMcCXMUnSgVMase7xUpAj+NC8sRLwXuBIH65on5ejFsM9yBn+BAW3uHg==
+  version "1.0.0-beta.18"
+  resolved "https://registry.yarnpkg.com/nestjs-prisma-crud/-/nestjs-prisma-crud-1.0.0-beta.18.tgz#9049c9e00ee0a9dfb47d0f17523ae0fb32073feb"
+  integrity sha512-TCKOwqgd2e6mLOzKGTr5NvZRsHmf0iyqraZiWBsRTTlnRCydZFsyR/PFoyLD2XKSY0La/WKcFOUZZm9FIe5NaQ==
   dependencies:
     joi "^17.4.2"
     object-traversal "^1.0.0"
