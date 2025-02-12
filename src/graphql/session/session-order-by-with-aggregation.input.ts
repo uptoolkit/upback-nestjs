@@ -9,16 +9,16 @@ import { SessionMinOrderByAggregateInput } from './session-min-order-by-aggregat
 export class SessionOrderByWithAggregationInput {
 
     @Field(() => SortOrder, {nullable:true})
-    id?: keyof typeof SortOrder;
+    id?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    sessionToken?: keyof typeof SortOrder;
+    sessionToken?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    userId?: keyof typeof SortOrder;
+    userId?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    expires?: keyof typeof SortOrder;
+    expires?: `${SortOrder}`;
 
     @Field(() => SessionCountOrderByAggregateInput, {nullable:true})
     _count?: SessionCountOrderByAggregateInput;

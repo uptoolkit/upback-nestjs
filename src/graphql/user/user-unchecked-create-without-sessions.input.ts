@@ -21,14 +21,14 @@ export class UserUncheckedCreateWithoutSessionsInput {
     @Field(() => String, {nullable:true})
     image?: string;
 
-    @Field(() => AccountUncheckedCreateNestedManyWithoutUserInput, {nullable:true})
-    accounts?: AccountUncheckedCreateNestedManyWithoutUserInput;
-
     @Field(() => String, {nullable:true})
     slug?: string;
 
     @Field(() => String, {nullable:true})
     name?: string;
+
+    @Field(() => AccountUncheckedCreateNestedManyWithoutUserInput, {nullable:true})
+    accounts?: AccountUncheckedCreateNestedManyWithoutUserInput;
 
     @Field(() => PostUncheckedCreateNestedManyWithoutAuthorInput, {nullable:true})
     posts?: PostUncheckedCreateNestedManyWithoutAuthorInput;

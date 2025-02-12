@@ -23,7 +23,7 @@ export class AccountGroupByArgs {
     orderBy?: Array<AccountOrderByWithAggregationInput>;
 
     @Field(() => [AccountScalarFieldEnum], {nullable:false})
-    by!: Array<keyof typeof AccountScalarFieldEnum>;
+    by!: Array<`${AccountScalarFieldEnum}`>;
 
     @Field(() => AccountScalarWhereWithAggregatesInput, {nullable:true})
     having?: AccountScalarWhereWithAggregatesInput;

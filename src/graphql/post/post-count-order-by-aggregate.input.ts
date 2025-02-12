@@ -6,26 +6,26 @@ import { SortOrder } from '../prisma/sort-order.enum';
 export class PostCountOrderByAggregateInput {
 
     @Field(() => SortOrder, {nullable:true})
-    id?: keyof typeof SortOrder;
+    id?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    createdAt?: keyof typeof SortOrder;
+    createdAt?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    updatedAt?: keyof typeof SortOrder;
+    updatedAt?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    title?: keyof typeof SortOrder;
+    title?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    content?: keyof typeof SortOrder;
+    content?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    published?: keyof typeof SortOrder;
+    published?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    viewCount?: keyof typeof SortOrder;
+    viewCount?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    authorId?: keyof typeof SortOrder;
+    authorId?: `${SortOrder}`;
 }

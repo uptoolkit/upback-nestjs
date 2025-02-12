@@ -3,7 +3,7 @@ import { InputType } from '@nestjs/graphql';
 import { StringFilter } from '../prisma/string-filter.input';
 import { StringNullableFilter } from '../prisma/string-nullable-filter.input';
 import { IntNullableFilter } from '../prisma/int-nullable-filter.input';
-import { UserRelationFilter } from '../user/user-relation-filter.input';
+import { UserScalarRelationFilter } from '../user/user-scalar-relation-filter.input';
 
 @InputType()
 export class AccountWhereInput {
@@ -53,6 +53,6 @@ export class AccountWhereInput {
     @Field(() => StringNullableFilter, {nullable:true})
     session_state?: StringNullableFilter;
 
-    @Field(() => UserRelationFilter, {nullable:true})
-    user?: UserRelationFilter;
+    @Field(() => UserScalarRelationFilter, {nullable:true})
+    user?: UserScalarRelationFilter;
 }

@@ -7,16 +7,16 @@ import { UserOrderByWithRelationInput } from '../user/user-order-by-with-relatio
 export class SessionOrderByWithRelationInput {
 
     @Field(() => SortOrder, {nullable:true})
-    id?: keyof typeof SortOrder;
+    id?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    sessionToken?: keyof typeof SortOrder;
+    sessionToken?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    userId?: keyof typeof SortOrder;
+    userId?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    expires?: keyof typeof SortOrder;
+    expires?: `${SortOrder}`;
 
     @Field(() => UserOrderByWithRelationInput, {nullable:true})
     user?: UserOrderByWithRelationInput;

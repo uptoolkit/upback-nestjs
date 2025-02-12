@@ -4,8 +4,9 @@ import { UserCreateWithoutSessionsInput } from './user-create-without-sessions.i
 import { Type } from 'class-transformer';
 import { UserCreateOrConnectWithoutSessionsInput } from './user-create-or-connect-without-sessions.input';
 import { UserUpsertWithoutSessionsInput } from './user-upsert-without-sessions.input';
+import { Prisma } from '@prisma/client';
 import { UserWhereUniqueInput } from './user-where-unique.input';
-import { UserUpdateWithoutSessionsInput } from './user-update-without-sessions.input';
+import { UserUpdateToOneWithWhereWithoutSessionsInput } from './user-update-to-one-with-where-without-sessions.input';
 
 @InputType()
 export class UserUpdateOneRequiredWithoutSessionsNestedInput {
@@ -24,9 +25,9 @@ export class UserUpdateOneRequiredWithoutSessionsNestedInput {
 
     @Field(() => UserWhereUniqueInput, {nullable:true})
     @Type(() => UserWhereUniqueInput)
-    connect?: UserWhereUniqueInput;
+    connect?: Prisma.AtLeast<UserWhereUniqueInput, 'id' | 'email' | 'slug'>;
 
-    @Field(() => UserUpdateWithoutSessionsInput, {nullable:true})
-    @Type(() => UserUpdateWithoutSessionsInput)
-    update?: UserUpdateWithoutSessionsInput;
+    @Field(() => UserUpdateToOneWithWhereWithoutSessionsInput, {nullable:true})
+    @Type(() => UserUpdateToOneWithWhereWithoutSessionsInput)
+    update?: UserUpdateToOneWithWhereWithoutSessionsInput;
 }

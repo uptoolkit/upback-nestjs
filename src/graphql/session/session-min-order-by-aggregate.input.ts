@@ -6,14 +6,14 @@ import { SortOrder } from '../prisma/sort-order.enum';
 export class SessionMinOrderByAggregateInput {
 
     @Field(() => SortOrder, {nullable:true})
-    id?: keyof typeof SortOrder;
+    id?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    sessionToken?: keyof typeof SortOrder;
+    sessionToken?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    userId?: keyof typeof SortOrder;
+    userId?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    expires?: keyof typeof SortOrder;
+    expires?: `${SortOrder}`;
 }

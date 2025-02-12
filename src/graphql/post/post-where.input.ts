@@ -5,7 +5,7 @@ import { DateTimeFilter } from '../prisma/date-time-filter.input';
 import { StringFilter } from '../prisma/string-filter.input';
 import { StringNullableFilter } from '../prisma/string-nullable-filter.input';
 import { BoolFilter } from '../prisma/bool-filter.input';
-import { UserRelationFilter } from '../user/user-relation-filter.input';
+import { UserNullableScalarRelationFilter } from '../user/user-nullable-scalar-relation-filter.input';
 
 @InputType()
 export class PostWhereInput {
@@ -40,9 +40,9 @@ export class PostWhereInput {
     @Field(() => IntFilter, {nullable:true})
     viewCount?: IntFilter;
 
-    @Field(() => UserRelationFilter, {nullable:true})
-    author?: UserRelationFilter;
-
     @Field(() => StringNullableFilter, {nullable:true})
     authorId?: StringNullableFilter;
+
+    @Field(() => UserNullableScalarRelationFilter, {nullable:true})
+    author?: UserNullableScalarRelationFilter;
 }

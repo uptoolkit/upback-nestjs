@@ -9,7 +9,6 @@ async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
 
   const prismaService = app.get(PrismaService);
-  await prismaService.enableShutdownHooks(app);
 
   app.useStaticAssets(resolve('./src/public'));
   app.setBaseViewsDir(resolve('./src/views'));

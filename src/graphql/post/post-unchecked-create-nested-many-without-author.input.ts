@@ -4,6 +4,7 @@ import { PostCreateWithoutAuthorInput } from './post-create-without-author.input
 import { Type } from 'class-transformer';
 import { PostCreateOrConnectWithoutAuthorInput } from './post-create-or-connect-without-author.input';
 import { PostCreateManyAuthorInputEnvelope } from './post-create-many-author-input-envelope.input';
+import { Prisma } from '@prisma/client';
 import { PostWhereUniqueInput } from './post-where-unique.input';
 
 @InputType()
@@ -23,5 +24,5 @@ export class PostUncheckedCreateNestedManyWithoutAuthorInput {
 
     @Field(() => [PostWhereUniqueInput], {nullable:true})
     @Type(() => PostWhereUniqueInput)
-    connect?: Array<PostWhereUniqueInput>;
+    connect?: Array<Prisma.AtLeast<PostWhereUniqueInput, 'id'>>;
 }

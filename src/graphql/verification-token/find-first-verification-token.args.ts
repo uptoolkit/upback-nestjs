@@ -3,6 +3,7 @@ import { ArgsType } from '@nestjs/graphql';
 import { VerificationTokenWhereInput } from './verification-token-where.input';
 import { Type } from 'class-transformer';
 import { VerificationTokenOrderByWithRelationInput } from './verification-token-order-by-with-relation.input';
+import { Prisma } from '@prisma/client';
 import { VerificationTokenWhereUniqueInput } from './verification-token-where-unique.input';
 import { Int } from '@nestjs/graphql';
 import { VerificationTokenScalarFieldEnum } from './verification-token-scalar-field.enum';
@@ -18,7 +19,7 @@ export class FindFirstVerificationTokenArgs {
     orderBy?: Array<VerificationTokenOrderByWithRelationInput>;
 
     @Field(() => VerificationTokenWhereUniqueInput, {nullable:true})
-    cursor?: VerificationTokenWhereUniqueInput;
+    cursor?: Prisma.AtLeast<VerificationTokenWhereUniqueInput, 'token' | 'identifier_token'>;
 
     @Field(() => Int, {nullable:true})
     take?: number;
@@ -27,5 +28,5 @@ export class FindFirstVerificationTokenArgs {
     skip?: number;
 
     @Field(() => [VerificationTokenScalarFieldEnum], {nullable:true})
-    distinct?: Array<keyof typeof VerificationTokenScalarFieldEnum>;
+    distinct?: Array<`${VerificationTokenScalarFieldEnum}`>;
 }

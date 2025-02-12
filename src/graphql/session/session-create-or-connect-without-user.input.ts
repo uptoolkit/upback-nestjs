@@ -1,5 +1,6 @@
 import { Field } from '@nestjs/graphql';
 import { InputType } from '@nestjs/graphql';
+import { Prisma } from '@prisma/client';
 import { SessionWhereUniqueInput } from './session-where-unique.input';
 import { Type } from 'class-transformer';
 import { SessionCreateWithoutUserInput } from './session-create-without-user.input';
@@ -9,7 +10,7 @@ export class SessionCreateOrConnectWithoutUserInput {
 
     @Field(() => SessionWhereUniqueInput, {nullable:false})
     @Type(() => SessionWhereUniqueInput)
-    where!: SessionWhereUniqueInput;
+    where!: Prisma.AtLeast<SessionWhereUniqueInput, 'id' | 'sessionToken'>;
 
     @Field(() => SessionCreateWithoutUserInput, {nullable:false})
     @Type(() => SessionCreateWithoutUserInput)

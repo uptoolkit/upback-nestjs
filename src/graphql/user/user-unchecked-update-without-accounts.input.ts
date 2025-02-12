@@ -24,14 +24,14 @@ export class UserUncheckedUpdateWithoutAccountsInput {
     @Field(() => NullableStringFieldUpdateOperationsInput, {nullable:true})
     image?: NullableStringFieldUpdateOperationsInput;
 
-    @Field(() => SessionUncheckedUpdateManyWithoutUserNestedInput, {nullable:true})
-    sessions?: SessionUncheckedUpdateManyWithoutUserNestedInput;
-
     @Field(() => NullableStringFieldUpdateOperationsInput, {nullable:true})
     slug?: NullableStringFieldUpdateOperationsInput;
 
     @Field(() => NullableStringFieldUpdateOperationsInput, {nullable:true})
     name?: NullableStringFieldUpdateOperationsInput;
+
+    @Field(() => SessionUncheckedUpdateManyWithoutUserNestedInput, {nullable:true})
+    sessions?: SessionUncheckedUpdateManyWithoutUserNestedInput;
 
     @Field(() => PostUncheckedUpdateManyWithoutAuthorNestedInput, {nullable:true})
     posts?: PostUncheckedUpdateManyWithoutAuthorNestedInput;

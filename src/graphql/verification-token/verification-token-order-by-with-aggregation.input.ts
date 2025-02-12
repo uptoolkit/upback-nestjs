@@ -9,13 +9,13 @@ import { VerificationTokenMinOrderByAggregateInput } from './verification-token-
 export class VerificationTokenOrderByWithAggregationInput {
 
     @Field(() => SortOrder, {nullable:true})
-    identifier?: keyof typeof SortOrder;
+    identifier?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    token?: keyof typeof SortOrder;
+    token?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    expires?: keyof typeof SortOrder;
+    expires?: `${SortOrder}`;
 
     @Field(() => VerificationTokenCountOrderByAggregateInput, {nullable:true})
     _count?: VerificationTokenCountOrderByAggregateInput;

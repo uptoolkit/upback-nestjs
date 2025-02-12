@@ -21,15 +21,15 @@ export class UserCreateWithoutPostsInput {
     @Field(() => String, {nullable:true})
     image?: string;
 
-    @Field(() => AccountCreateNestedManyWithoutUserInput, {nullable:true})
-    accounts?: AccountCreateNestedManyWithoutUserInput;
-
-    @Field(() => SessionCreateNestedManyWithoutUserInput, {nullable:true})
-    sessions?: SessionCreateNestedManyWithoutUserInput;
-
     @Field(() => String, {nullable:true})
     slug?: string;
 
     @Field(() => String, {nullable:true})
     name?: string;
+
+    @Field(() => AccountCreateNestedManyWithoutUserInput, {nullable:true})
+    accounts?: AccountCreateNestedManyWithoutUserInput;
+
+    @Field(() => SessionCreateNestedManyWithoutUserInput, {nullable:true})
+    sessions?: SessionCreateNestedManyWithoutUserInput;
 }

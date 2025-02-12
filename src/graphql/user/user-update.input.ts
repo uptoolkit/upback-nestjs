@@ -25,17 +25,17 @@ export class UserUpdateInput {
     @Field(() => NullableStringFieldUpdateOperationsInput, {nullable:true})
     image?: NullableStringFieldUpdateOperationsInput;
 
-    @Field(() => AccountUpdateManyWithoutUserNestedInput, {nullable:true})
-    accounts?: AccountUpdateManyWithoutUserNestedInput;
-
-    @Field(() => SessionUpdateManyWithoutUserNestedInput, {nullable:true})
-    sessions?: SessionUpdateManyWithoutUserNestedInput;
-
     @Field(() => NullableStringFieldUpdateOperationsInput, {nullable:true})
     slug?: NullableStringFieldUpdateOperationsInput;
 
     @Field(() => NullableStringFieldUpdateOperationsInput, {nullable:true})
     name?: NullableStringFieldUpdateOperationsInput;
+
+    @Field(() => AccountUpdateManyWithoutUserNestedInput, {nullable:true})
+    accounts?: AccountUpdateManyWithoutUserNestedInput;
+
+    @Field(() => SessionUpdateManyWithoutUserNestedInput, {nullable:true})
+    sessions?: SessionUpdateManyWithoutUserNestedInput;
 
     @Field(() => PostUpdateManyWithoutAuthorNestedInput, {nullable:true})
     posts?: PostUpdateManyWithoutAuthorNestedInput;

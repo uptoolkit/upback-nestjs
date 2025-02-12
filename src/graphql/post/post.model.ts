@@ -22,15 +22,15 @@ export class Post {
     @Field(() => String, {nullable:true})
     content!: string | null;
 
-    @Field(() => Boolean, {nullable:false,defaultValue:false})
+    @Field(() => Boolean, {defaultValue:false,nullable:false})
     published!: boolean;
 
-    @Field(() => Int, {nullable:false,defaultValue:0})
+    @Field(() => Int, {defaultValue:0,nullable:false})
     viewCount!: number;
-
-    @Field(() => User, {nullable:true})
-    author?: User | null;
 
     @Field(() => String, {nullable:true})
     authorId!: string | null;
+
+    @Field(() => User, {nullable:true})
+    author?: User | null;
 }

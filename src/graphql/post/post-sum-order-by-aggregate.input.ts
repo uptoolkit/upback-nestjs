@@ -6,8 +6,8 @@ import { SortOrder } from '../prisma/sort-order.enum';
 export class PostSumOrderByAggregateInput {
 
     @Field(() => SortOrder, {nullable:true})
-    id?: keyof typeof SortOrder;
+    id?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    viewCount?: keyof typeof SortOrder;
+    viewCount?: `${SortOrder}`;
 }

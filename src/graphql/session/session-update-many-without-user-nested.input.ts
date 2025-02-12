@@ -5,6 +5,7 @@ import { Type } from 'class-transformer';
 import { SessionCreateOrConnectWithoutUserInput } from './session-create-or-connect-without-user.input';
 import { SessionUpsertWithWhereUniqueWithoutUserInput } from './session-upsert-with-where-unique-without-user.input';
 import { SessionCreateManyUserInputEnvelope } from './session-create-many-user-input-envelope.input';
+import { Prisma } from '@prisma/client';
 import { SessionWhereUniqueInput } from './session-where-unique.input';
 import { SessionUpdateWithWhereUniqueWithoutUserInput } from './session-update-with-where-unique-without-user.input';
 import { SessionUpdateManyWithWhereWithoutUserInput } from './session-update-many-with-where-without-user.input';
@@ -31,19 +32,19 @@ export class SessionUpdateManyWithoutUserNestedInput {
 
     @Field(() => [SessionWhereUniqueInput], {nullable:true})
     @Type(() => SessionWhereUniqueInput)
-    set?: Array<SessionWhereUniqueInput>;
+    set?: Array<Prisma.AtLeast<SessionWhereUniqueInput, 'id' | 'sessionToken'>>;
 
     @Field(() => [SessionWhereUniqueInput], {nullable:true})
     @Type(() => SessionWhereUniqueInput)
-    disconnect?: Array<SessionWhereUniqueInput>;
+    disconnect?: Array<Prisma.AtLeast<SessionWhereUniqueInput, 'id' | 'sessionToken'>>;
 
     @Field(() => [SessionWhereUniqueInput], {nullable:true})
     @Type(() => SessionWhereUniqueInput)
-    delete?: Array<SessionWhereUniqueInput>;
+    delete?: Array<Prisma.AtLeast<SessionWhereUniqueInput, 'id' | 'sessionToken'>>;
 
     @Field(() => [SessionWhereUniqueInput], {nullable:true})
     @Type(() => SessionWhereUniqueInput)
-    connect?: Array<SessionWhereUniqueInput>;
+    connect?: Array<Prisma.AtLeast<SessionWhereUniqueInput, 'id' | 'sessionToken'>>;
 
     @Field(() => [SessionUpdateWithWhereUniqueWithoutUserInput], {nullable:true})
     @Type(() => SessionUpdateWithWhereUniqueWithoutUserInput)

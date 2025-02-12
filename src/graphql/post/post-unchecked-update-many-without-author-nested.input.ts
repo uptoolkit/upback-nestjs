@@ -5,6 +5,7 @@ import { Type } from 'class-transformer';
 import { PostCreateOrConnectWithoutAuthorInput } from './post-create-or-connect-without-author.input';
 import { PostUpsertWithWhereUniqueWithoutAuthorInput } from './post-upsert-with-where-unique-without-author.input';
 import { PostCreateManyAuthorInputEnvelope } from './post-create-many-author-input-envelope.input';
+import { Prisma } from '@prisma/client';
 import { PostWhereUniqueInput } from './post-where-unique.input';
 import { PostUpdateWithWhereUniqueWithoutAuthorInput } from './post-update-with-where-unique-without-author.input';
 import { PostUpdateManyWithWhereWithoutAuthorInput } from './post-update-many-with-where-without-author.input';
@@ -31,19 +32,19 @@ export class PostUncheckedUpdateManyWithoutAuthorNestedInput {
 
     @Field(() => [PostWhereUniqueInput], {nullable:true})
     @Type(() => PostWhereUniqueInput)
-    set?: Array<PostWhereUniqueInput>;
+    set?: Array<Prisma.AtLeast<PostWhereUniqueInput, 'id'>>;
 
     @Field(() => [PostWhereUniqueInput], {nullable:true})
     @Type(() => PostWhereUniqueInput)
-    disconnect?: Array<PostWhereUniqueInput>;
+    disconnect?: Array<Prisma.AtLeast<PostWhereUniqueInput, 'id'>>;
 
     @Field(() => [PostWhereUniqueInput], {nullable:true})
     @Type(() => PostWhereUniqueInput)
-    delete?: Array<PostWhereUniqueInput>;
+    delete?: Array<Prisma.AtLeast<PostWhereUniqueInput, 'id'>>;
 
     @Field(() => [PostWhereUniqueInput], {nullable:true})
     @Type(() => PostWhereUniqueInput)
-    connect?: Array<PostWhereUniqueInput>;
+    connect?: Array<Prisma.AtLeast<PostWhereUniqueInput, 'id'>>;
 
     @Field(() => [PostUpdateWithWhereUniqueWithoutAuthorInput], {nullable:true})
     @Type(() => PostUpdateWithWhereUniqueWithoutAuthorInput)

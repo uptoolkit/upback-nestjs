@@ -6,23 +6,23 @@ import { SortOrder } from '../prisma/sort-order.enum';
 export class UserMaxOrderByAggregateInput {
 
     @Field(() => SortOrder, {nullable:true})
-    id?: keyof typeof SortOrder;
+    id?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    email?: keyof typeof SortOrder;
+    email?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    password?: keyof typeof SortOrder;
+    password?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    emailVerified?: keyof typeof SortOrder;
+    emailVerified?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    image?: keyof typeof SortOrder;
+    image?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    slug?: keyof typeof SortOrder;
+    slug?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    name?: keyof typeof SortOrder;
+    name?: `${SortOrder}`;
 }

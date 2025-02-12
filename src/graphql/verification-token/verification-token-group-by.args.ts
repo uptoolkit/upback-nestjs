@@ -21,7 +21,7 @@ export class VerificationTokenGroupByArgs {
     orderBy?: Array<VerificationTokenOrderByWithAggregationInput>;
 
     @Field(() => [VerificationTokenScalarFieldEnum], {nullable:false})
-    by!: Array<keyof typeof VerificationTokenScalarFieldEnum>;
+    by!: Array<`${VerificationTokenScalarFieldEnum}`>;
 
     @Field(() => VerificationTokenScalarWhereWithAggregatesInput, {nullable:true})
     having?: VerificationTokenScalarWhereWithAggregatesInput;

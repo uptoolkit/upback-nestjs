@@ -1,6 +1,7 @@
 import { Field } from '@nestjs/graphql';
 import { InputType } from '@nestjs/graphql';
 import { SortOrder } from '../prisma/sort-order.enum';
+import { SortOrderInput } from '../prisma/sort-order.input';
 import { AccountOrderByRelationAggregateInput } from '../account/account-order-by-relation-aggregate.input';
 import { SessionOrderByRelationAggregateInput } from '../session/session-order-by-relation-aggregate.input';
 import { PostOrderByRelationAggregateInput } from '../post/post-order-by-relation-aggregate.input';
@@ -9,31 +10,31 @@ import { PostOrderByRelationAggregateInput } from '../post/post-order-by-relatio
 export class UserOrderByWithRelationInput {
 
     @Field(() => SortOrder, {nullable:true})
-    id?: keyof typeof SortOrder;
+    id?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    email?: keyof typeof SortOrder;
+    email?: `${SortOrder}`;
 
-    @Field(() => SortOrder, {nullable:true})
-    password?: keyof typeof SortOrder;
+    @Field(() => SortOrderInput, {nullable:true})
+    password?: SortOrderInput;
 
-    @Field(() => SortOrder, {nullable:true})
-    emailVerified?: keyof typeof SortOrder;
+    @Field(() => SortOrderInput, {nullable:true})
+    emailVerified?: SortOrderInput;
 
-    @Field(() => SortOrder, {nullable:true})
-    image?: keyof typeof SortOrder;
+    @Field(() => SortOrderInput, {nullable:true})
+    image?: SortOrderInput;
+
+    @Field(() => SortOrderInput, {nullable:true})
+    slug?: SortOrderInput;
+
+    @Field(() => SortOrderInput, {nullable:true})
+    name?: SortOrderInput;
 
     @Field(() => AccountOrderByRelationAggregateInput, {nullable:true})
     accounts?: AccountOrderByRelationAggregateInput;
 
     @Field(() => SessionOrderByRelationAggregateInput, {nullable:true})
     sessions?: SessionOrderByRelationAggregateInput;
-
-    @Field(() => SortOrder, {nullable:true})
-    slug?: keyof typeof SortOrder;
-
-    @Field(() => SortOrder, {nullable:true})
-    name?: keyof typeof SortOrder;
 
     @Field(() => PostOrderByRelationAggregateInput, {nullable:true})
     posts?: PostOrderByRelationAggregateInput;

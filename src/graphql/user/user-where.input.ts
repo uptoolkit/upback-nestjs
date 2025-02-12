@@ -34,17 +34,17 @@ export class UserWhereInput {
     @Field(() => StringNullableFilter, {nullable:true})
     image?: StringNullableFilter;
 
-    @Field(() => AccountListRelationFilter, {nullable:true})
-    accounts?: AccountListRelationFilter;
-
-    @Field(() => SessionListRelationFilter, {nullable:true})
-    sessions?: SessionListRelationFilter;
-
     @Field(() => StringNullableFilter, {nullable:true})
     slug?: StringNullableFilter;
 
     @Field(() => StringNullableFilter, {nullable:true})
     name?: StringNullableFilter;
+
+    @Field(() => AccountListRelationFilter, {nullable:true})
+    accounts?: AccountListRelationFilter;
+
+    @Field(() => SessionListRelationFilter, {nullable:true})
+    sessions?: SessionListRelationFilter;
 
     @Field(() => PostListRelationFilter, {nullable:true})
     posts?: PostListRelationFilter;

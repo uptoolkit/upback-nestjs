@@ -23,7 +23,7 @@ export class PostGroupByArgs {
     orderBy?: Array<PostOrderByWithAggregationInput>;
 
     @Field(() => [PostScalarFieldEnum], {nullable:false})
-    by!: Array<keyof typeof PostScalarFieldEnum>;
+    by!: Array<`${PostScalarFieldEnum}`>;
 
     @Field(() => PostScalarWhereWithAggregatesInput, {nullable:true})
     having?: PostScalarWhereWithAggregatesInput;

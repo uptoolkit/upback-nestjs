@@ -4,6 +4,7 @@ import { SessionCreateWithoutUserInput } from './session-create-without-user.inp
 import { Type } from 'class-transformer';
 import { SessionCreateOrConnectWithoutUserInput } from './session-create-or-connect-without-user.input';
 import { SessionCreateManyUserInputEnvelope } from './session-create-many-user-input-envelope.input';
+import { Prisma } from '@prisma/client';
 import { SessionWhereUniqueInput } from './session-where-unique.input';
 
 @InputType()
@@ -23,5 +24,5 @@ export class SessionCreateNestedManyWithoutUserInput {
 
     @Field(() => [SessionWhereUniqueInput], {nullable:true})
     @Type(() => SessionWhereUniqueInput)
-    connect?: Array<SessionWhereUniqueInput>;
+    connect?: Array<Prisma.AtLeast<SessionWhereUniqueInput, 'id' | 'sessionToken'>>;
 }

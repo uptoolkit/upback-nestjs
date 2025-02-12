@@ -6,38 +6,38 @@ import { SortOrder } from '../prisma/sort-order.enum';
 export class AccountMaxOrderByAggregateInput {
 
     @Field(() => SortOrder, {nullable:true})
-    id?: keyof typeof SortOrder;
+    id?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    userId?: keyof typeof SortOrder;
+    userId?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    type?: keyof typeof SortOrder;
+    type?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    provider?: keyof typeof SortOrder;
+    provider?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    providerAccountId?: keyof typeof SortOrder;
+    providerAccountId?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    refresh_token?: keyof typeof SortOrder;
+    refresh_token?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    access_token?: keyof typeof SortOrder;
+    access_token?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    expires_at?: keyof typeof SortOrder;
+    expires_at?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    token_type?: keyof typeof SortOrder;
+    token_type?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    scope?: keyof typeof SortOrder;
+    scope?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    id_token?: keyof typeof SortOrder;
+    id_token?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    session_state?: keyof typeof SortOrder;
+    session_state?: `${SortOrder}`;
 }

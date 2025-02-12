@@ -1,6 +1,7 @@
 import { Field } from '@nestjs/graphql';
 import { InputType } from '@nestjs/graphql';
 import { SortOrder } from '../prisma/sort-order.enum';
+import { SortOrderInput } from '../prisma/sort-order.input';
 import { AccountCountOrderByAggregateInput } from './account-count-order-by-aggregate.input';
 import { AccountAvgOrderByAggregateInput } from './account-avg-order-by-aggregate.input';
 import { AccountMaxOrderByAggregateInput } from './account-max-order-by-aggregate.input';
@@ -11,40 +12,40 @@ import { AccountSumOrderByAggregateInput } from './account-sum-order-by-aggregat
 export class AccountOrderByWithAggregationInput {
 
     @Field(() => SortOrder, {nullable:true})
-    id?: keyof typeof SortOrder;
+    id?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    userId?: keyof typeof SortOrder;
+    userId?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    type?: keyof typeof SortOrder;
+    type?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    provider?: keyof typeof SortOrder;
+    provider?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    providerAccountId?: keyof typeof SortOrder;
+    providerAccountId?: `${SortOrder}`;
 
-    @Field(() => SortOrder, {nullable:true})
-    refresh_token?: keyof typeof SortOrder;
+    @Field(() => SortOrderInput, {nullable:true})
+    refresh_token?: SortOrderInput;
 
-    @Field(() => SortOrder, {nullable:true})
-    access_token?: keyof typeof SortOrder;
+    @Field(() => SortOrderInput, {nullable:true})
+    access_token?: SortOrderInput;
 
-    @Field(() => SortOrder, {nullable:true})
-    expires_at?: keyof typeof SortOrder;
+    @Field(() => SortOrderInput, {nullable:true})
+    expires_at?: SortOrderInput;
 
-    @Field(() => SortOrder, {nullable:true})
-    token_type?: keyof typeof SortOrder;
+    @Field(() => SortOrderInput, {nullable:true})
+    token_type?: SortOrderInput;
 
-    @Field(() => SortOrder, {nullable:true})
-    scope?: keyof typeof SortOrder;
+    @Field(() => SortOrderInput, {nullable:true})
+    scope?: SortOrderInput;
 
-    @Field(() => SortOrder, {nullable:true})
-    id_token?: keyof typeof SortOrder;
+    @Field(() => SortOrderInput, {nullable:true})
+    id_token?: SortOrderInput;
 
-    @Field(() => SortOrder, {nullable:true})
-    session_state?: keyof typeof SortOrder;
+    @Field(() => SortOrderInput, {nullable:true})
+    session_state?: SortOrderInput;
 
     @Field(() => AccountCountOrderByAggregateInput, {nullable:true})
     _count?: AccountCountOrderByAggregateInput;

@@ -3,6 +3,7 @@ import { ArgsType } from '@nestjs/graphql';
 import { PostUpdateManyMutationInput } from './post-update-many-mutation.input';
 import { Type } from 'class-transformer';
 import { PostWhereInput } from './post-where.input';
+import { Int } from '@nestjs/graphql';
 
 @ArgsType()
 export class UpdateManyPostArgs {
@@ -14,4 +15,7 @@ export class UpdateManyPostArgs {
     @Field(() => PostWhereInput, {nullable:true})
     @Type(() => PostWhereInput)
     where?: PostWhereInput;
+
+    @Field(() => Int, {nullable:true})
+    limit?: number;
 }

@@ -5,6 +5,7 @@ import { Type } from 'class-transformer';
 import { AccountCreateOrConnectWithoutUserInput } from './account-create-or-connect-without-user.input';
 import { AccountUpsertWithWhereUniqueWithoutUserInput } from './account-upsert-with-where-unique-without-user.input';
 import { AccountCreateManyUserInputEnvelope } from './account-create-many-user-input-envelope.input';
+import { Prisma } from '@prisma/client';
 import { AccountWhereUniqueInput } from './account-where-unique.input';
 import { AccountUpdateWithWhereUniqueWithoutUserInput } from './account-update-with-where-unique-without-user.input';
 import { AccountUpdateManyWithWhereWithoutUserInput } from './account-update-many-with-where-without-user.input';
@@ -31,19 +32,19 @@ export class AccountUpdateManyWithoutUserNestedInput {
 
     @Field(() => [AccountWhereUniqueInput], {nullable:true})
     @Type(() => AccountWhereUniqueInput)
-    set?: Array<AccountWhereUniqueInput>;
+    set?: Array<Prisma.AtLeast<AccountWhereUniqueInput, 'id' | 'provider_providerAccountId'>>;
 
     @Field(() => [AccountWhereUniqueInput], {nullable:true})
     @Type(() => AccountWhereUniqueInput)
-    disconnect?: Array<AccountWhereUniqueInput>;
+    disconnect?: Array<Prisma.AtLeast<AccountWhereUniqueInput, 'id' | 'provider_providerAccountId'>>;
 
     @Field(() => [AccountWhereUniqueInput], {nullable:true})
     @Type(() => AccountWhereUniqueInput)
-    delete?: Array<AccountWhereUniqueInput>;
+    delete?: Array<Prisma.AtLeast<AccountWhereUniqueInput, 'id' | 'provider_providerAccountId'>>;
 
     @Field(() => [AccountWhereUniqueInput], {nullable:true})
     @Type(() => AccountWhereUniqueInput)
-    connect?: Array<AccountWhereUniqueInput>;
+    connect?: Array<Prisma.AtLeast<AccountWhereUniqueInput, 'id' | 'provider_providerAccountId'>>;
 
     @Field(() => [AccountUpdateWithWhereUniqueWithoutUserInput], {nullable:true})
     @Type(() => AccountUpdateWithWhereUniqueWithoutUserInput)

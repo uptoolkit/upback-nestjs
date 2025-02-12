@@ -2,7 +2,7 @@ import { Field } from '@nestjs/graphql';
 import { InputType } from '@nestjs/graphql';
 import { StringFilter } from '../prisma/string-filter.input';
 import { DateTimeFilter } from '../prisma/date-time-filter.input';
-import { UserRelationFilter } from '../user/user-relation-filter.input';
+import { UserScalarRelationFilter } from '../user/user-scalar-relation-filter.input';
 
 @InputType()
 export class SessionWhereInput {
@@ -28,6 +28,6 @@ export class SessionWhereInput {
     @Field(() => DateTimeFilter, {nullable:true})
     expires?: DateTimeFilter;
 
-    @Field(() => UserRelationFilter, {nullable:true})
-    user?: UserRelationFilter;
+    @Field(() => UserScalarRelationFilter, {nullable:true})
+    user?: UserScalarRelationFilter;
 }

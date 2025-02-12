@@ -11,7 +11,6 @@ import { PrismaService } from './prisma.service';
 import { AppResolver } from './app.resolver';
 import { GraphqlModule } from './graphql/graphql.module';
 import { AppController } from './app.controller';
-import { PostsModule } from './posts/posts.module';
 
 @Module({
   imports: [
@@ -31,7 +30,6 @@ import { PostsModule } from './posts/posts.module';
     }),
     GraphqlModule,
     AppResolver,
-    PostsModule,
   ],
   providers: [AppResolver],
   controllers: [AppController],

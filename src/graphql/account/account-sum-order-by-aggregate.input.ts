@@ -6,5 +6,5 @@ import { SortOrder } from '../prisma/sort-order.enum';
 export class AccountSumOrderByAggregateInput {
 
     @Field(() => SortOrder, {nullable:true})
-    expires_at?: keyof typeof SortOrder;
+    expires_at?: `${SortOrder}`;
 }

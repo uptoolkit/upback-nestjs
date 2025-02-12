@@ -4,8 +4,10 @@ import { UserCreateWithoutPostsInput } from './user-create-without-posts.input';
 import { Type } from 'class-transformer';
 import { UserCreateOrConnectWithoutPostsInput } from './user-create-or-connect-without-posts.input';
 import { UserUpsertWithoutPostsInput } from './user-upsert-without-posts.input';
+import { UserWhereInput } from './user-where.input';
+import { Prisma } from '@prisma/client';
 import { UserWhereUniqueInput } from './user-where-unique.input';
-import { UserUpdateWithoutPostsInput } from './user-update-without-posts.input';
+import { UserUpdateToOneWithWhereWithoutPostsInput } from './user-update-to-one-with-where-without-posts.input';
 
 @InputType()
 export class UserUpdateOneWithoutPostsNestedInput {
@@ -22,17 +24,19 @@ export class UserUpdateOneWithoutPostsNestedInput {
     @Type(() => UserUpsertWithoutPostsInput)
     upsert?: UserUpsertWithoutPostsInput;
 
-    @Field(() => Boolean, {nullable:true})
-    disconnect?: boolean;
+    @Field(() => UserWhereInput, {nullable:true})
+    @Type(() => UserWhereInput)
+    disconnect?: UserWhereInput;
 
-    @Field(() => Boolean, {nullable:true})
-    delete?: boolean;
+    @Field(() => UserWhereInput, {nullable:true})
+    @Type(() => UserWhereInput)
+    delete?: UserWhereInput;
 
     @Field(() => UserWhereUniqueInput, {nullable:true})
     @Type(() => UserWhereUniqueInput)
-    connect?: UserWhereUniqueInput;
+    connect?: Prisma.AtLeast<UserWhereUniqueInput, 'id' | 'email' | 'slug'>;
 
-    @Field(() => UserUpdateWithoutPostsInput, {nullable:true})
-    @Type(() => UserUpdateWithoutPostsInput)
-    update?: UserUpdateWithoutPostsInput;
+    @Field(() => UserUpdateToOneWithWhereWithoutPostsInput, {nullable:true})
+    @Type(() => UserUpdateToOneWithWhereWithoutPostsInput)
+    update?: UserUpdateToOneWithWhereWithoutPostsInput;
 }

@@ -24,17 +24,17 @@ export class User {
     @Field(() => String, {nullable:true})
     image!: string | null;
 
-    @Field(() => [Account], {nullable:true})
-    accounts?: Array<Account>;
-
-    @Field(() => [Session], {nullable:true})
-    sessions?: Array<Session>;
-
     @Field(() => String, {nullable:true})
     slug!: string | null;
 
     @Field(() => String, {nullable:true})
     name!: string | null;
+
+    @Field(() => [Account], {nullable:true})
+    accounts?: Array<Account>;
+
+    @Field(() => [Session], {nullable:true})
+    sessions?: Array<Session>;
 
     @Field(() => [Post], {nullable:true})
     posts?: Array<Post>;

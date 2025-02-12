@@ -21,7 +21,7 @@ export class SessionGroupByArgs {
     orderBy?: Array<SessionOrderByWithAggregationInput>;
 
     @Field(() => [SessionScalarFieldEnum], {nullable:false})
-    by!: Array<keyof typeof SessionScalarFieldEnum>;
+    by!: Array<`${SessionScalarFieldEnum}`>;
 
     @Field(() => SessionScalarWhereWithAggregatesInput, {nullable:true})
     having?: SessionScalarWhereWithAggregatesInput;

@@ -6,11 +6,11 @@ import { SortOrder } from '../prisma/sort-order.enum';
 export class VerificationTokenOrderByWithRelationInput {
 
     @Field(() => SortOrder, {nullable:true})
-    identifier?: keyof typeof SortOrder;
+    identifier?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    token?: keyof typeof SortOrder;
+    token?: `${SortOrder}`;
 
     @Field(() => SortOrder, {nullable:true})
-    expires?: keyof typeof SortOrder;
+    expires?: `${SortOrder}`;
 }

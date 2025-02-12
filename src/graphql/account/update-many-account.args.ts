@@ -3,6 +3,7 @@ import { ArgsType } from '@nestjs/graphql';
 import { AccountUpdateManyMutationInput } from './account-update-many-mutation.input';
 import { Type } from 'class-transformer';
 import { AccountWhereInput } from './account-where.input';
+import { Int } from '@nestjs/graphql';
 
 @ArgsType()
 export class UpdateManyAccountArgs {
@@ -14,4 +15,7 @@ export class UpdateManyAccountArgs {
     @Field(() => AccountWhereInput, {nullable:true})
     @Type(() => AccountWhereInput)
     where?: AccountWhereInput;
+
+    @Field(() => Int, {nullable:true})
+    limit?: number;
 }
