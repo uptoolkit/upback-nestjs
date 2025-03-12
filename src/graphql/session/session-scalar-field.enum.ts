@@ -1,11 +1,13 @@
-import { registerEnumType } from '@nestjs/graphql';
+import { registerEnumType } from "@nestjs/graphql";
 
 export enum SessionScalarFieldEnum {
-    id = "id",
-    sessionToken = "sessionToken",
-    userId = "userId",
-    expires = "expires"
+  id = "id",
+  sessionToken = "sessionToken",
+  userId = "userId",
+  expires = "expires",
 }
 
-
-registerEnumType(SessionScalarFieldEnum, { name: 'SessionScalarFieldEnum', description: undefined })
+registerEnumType(SessionScalarFieldEnum, {
+  name: "SessionScalarFieldEnum",
+  description: undefined,
+});

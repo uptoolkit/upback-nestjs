@@ -17,6 +17,7 @@ Clone this repository:
 ```
 git clone git@github.com:uptoolkit/upback-nestjs.git --depth=1
 ```
+
 </details>
 
 Install npm dependencies :
@@ -39,7 +40,6 @@ yarn dev
 
 By default it use a Postgres SQL from the docker-compose. You should adapt the .env (you can start from the .env.example) and the schema.prisma to adapt it to your preferred database connection. Please be sure to have docker and docker-compose ([https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)) on your computer before launching this command. You can have a quick check to docker-compose.yml to adapt it to your needs. There is pgadmin and appsmith (nocode app) included but absolutely not mandatory (you can remove it from the docker-compose.yml).
 
-
 ```
 docker-compose up -d
 ```
@@ -52,7 +52,6 @@ npx prisma migrate dev --name init
 
 When `npx prisma migrate dev` is executed against a newly created database, seeding is also triggered. The seed file in [`prisma/seed.ts`](./prisma/seed.ts) will be executed and your database will be populated with the sample data.
 
-
 ### 2. Start the GraphQL server
 
 Launch your GraphQL server with this command:
@@ -63,15 +62,13 @@ npm run dev
 
 Navigate to [http://localhost:3000/graphql](http://localhost:3000/graphql) in your browser to explore the API of your GraphQL server in a [GraphQL Playground](https://github.com/prisma/graphql-playground).
 
-
 ## Using the GraphQL API
 
-Follow the guide here : 
+Follow the guide here :
 
 [https://docs.nestjs.com/graphql/resolvers](https://docs.nestjs.com/graphql/resolvers)
 
 ## Using the Rest Api helper
-
 
 Follow the guide here :
 
@@ -79,7 +76,7 @@ Follow the guide here :
 
 ## Use the CRUD helper
 
-This boilerplate is shipped with the native crud helper from Nest and a Prisma Crud helper : 
+This boilerplate is shipped with the native crud helper from Nest and a Prisma Crud helper :
 
 - [https://docs.nestjs.com/recipes/crud-generator](https://docs.nestjs.com/recipes/crud-generator)
 - [https://github.com/kepelrs/nestjs-prisma-crud](https://github.com/kepelrs/nestjs-prisma-crud)
@@ -92,7 +89,7 @@ You are of course free to adapt but you will have a good go to auth module to st
 
 ## Switch to another database (e.g. PostgreSQL, MySQL, SQL Server, MongoDB)
 
-If you want to try this example with another database than SQLite, you can adjust the the database connection in [`prisma/schema.prisma`](./prisma/schema.prisma) by reconfiguring the `datasource` block. 
+If you want to try this example with another database than SQLite, you can adjust the the database connection in [`prisma/schema.prisma`](./prisma/schema.prisma) by reconfiguring the `datasource` block.
 
 Learn more about the different connection configurations in the [docs](https://www.prisma.io/docs/reference/database-reference/connection-urls).
 
@@ -159,6 +156,7 @@ datasource db {
   url      = "mongodb://USERNAME:PASSWORD@HOST/DATABASE?authSource=admin&retryWrites=true&w=majority"
 }
 ```
+
 Because MongoDB is currently in [Preview](https://www.prisma.io/docs/about/releases#preview), you need to specify the `previewFeatures` on your `generator` block:
 
 ```
@@ -167,6 +165,7 @@ generator client {
   previewFeatures = ["mongodb"]
 }
 ```
+
 </details>
 
 ## Bonus : Nocode AppSmith interface
@@ -182,5 +181,3 @@ More infos : [https://www.appsmith.com/](https://www.appsmith.com/)
 - Try to login and have a token access with : https://docs.nestjs.com/security/authentication
 - Play with docker-compose up and AppSmith
 - Participate and ask for new features on Github
-
-

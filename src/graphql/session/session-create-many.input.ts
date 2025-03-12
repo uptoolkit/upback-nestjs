@@ -1,18 +1,17 @@
-import { Field } from '@nestjs/graphql';
-import { InputType } from '@nestjs/graphql';
+import { Field } from "@nestjs/graphql";
+import { InputType } from "@nestjs/graphql";
 
 @InputType()
 export class SessionCreateManyInput {
+  @Field(() => String, { nullable: true })
+  id?: string;
 
-    @Field(() => String, {nullable:true})
-    id?: string;
+  @Field(() => String, { nullable: false })
+  sessionToken!: string;
 
-    @Field(() => String, {nullable:false})
-    sessionToken!: string;
+  @Field(() => String, { nullable: false })
+  userId!: string;
 
-    @Field(() => String, {nullable:false})
-    userId!: string;
-
-    @Field(() => Date, {nullable:false})
-    expires!: Date | string;
+  @Field(() => Date, { nullable: false })
+  expires!: Date | string;
 }

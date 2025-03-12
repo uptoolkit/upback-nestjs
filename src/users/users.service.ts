@@ -1,13 +1,13 @@
-import { Injectable } from '@nestjs/common';
-import { PrismaCrudService } from 'nestjs-prisma-crud';
-import { PrismaService } from '../prisma.service';
-import { compare } from 'bcrypt';
+import { Injectable } from "@nestjs/common";
+import { PrismaCrudService } from "nestjs-prisma-crud";
+import { PrismaService } from "../prisma.service";
+import { compare } from "bcrypt";
 
 @Injectable()
 export class UsersService extends PrismaCrudService {
   constructor(private prisma: PrismaService) {
     super({
-      model: 'User',
+      model: "User",
       allowedJoins: [],
       defaultJoins: [],
     });

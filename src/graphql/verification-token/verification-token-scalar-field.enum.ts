@@ -1,10 +1,12 @@
-import { registerEnumType } from '@nestjs/graphql';
+import { registerEnumType } from "@nestjs/graphql";
 
 export enum VerificationTokenScalarFieldEnum {
-    identifier = "identifier",
-    token = "token",
-    expires = "expires"
+  identifier = "identifier",
+  token = "token",
+  expires = "expires",
 }
 
-
-registerEnumType(VerificationTokenScalarFieldEnum, { name: 'VerificationTokenScalarFieldEnum', description: undefined })
+registerEnumType(VerificationTokenScalarFieldEnum, {
+  name: "VerificationTokenScalarFieldEnum",
+  description: undefined,
+});

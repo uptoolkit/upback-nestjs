@@ -1,9 +1,11 @@
-import { registerEnumType } from '@nestjs/graphql';
+import { registerEnumType } from "@nestjs/graphql";
 
 export enum GroupScalarFieldEnum {
-    id = "id",
-    name = "name"
+  id = "id",
+  name = "name",
 }
 
-
-registerEnumType(GroupScalarFieldEnum, { name: 'GroupScalarFieldEnum', description: undefined })
+registerEnumType(GroupScalarFieldEnum, {
+  name: "GroupScalarFieldEnum",
+  description: undefined,
+});
